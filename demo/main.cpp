@@ -16,6 +16,12 @@ int main(int argc, char **argv)
     Float crease_angle = -1, scale = -1;
     std::string batchOutput;
 
+	if(argc >= 2)
+		args.push_back(argv[1]);
+
+	//TODO:parse command line
+	batchOutput = "out.obj";
+
     int nConstraints = 0;
     nConstraints += scale > 0 ? 1 : 0;
     nConstraints += face_count > 0 ? 1 : 0;
